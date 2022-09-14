@@ -8,6 +8,8 @@ Kelas PBP A
 # Link Heroku: 
 https://tugas-2-sissy.herokuapp.com  
 
+https://tugas-2-sissy.herokuapp.com/katalog 
+
 
 # 1. Bagan
 (Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html)
