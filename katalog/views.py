@@ -7,6 +7,7 @@ def show_katalog(request):
     context = {
         'list_barang': data_barang_katalog,
         'nama': 'Fauziah Putri Fajrianti',
+        'id': '2106707435',
     }
     return render(request, "katalog.html", context)
 
