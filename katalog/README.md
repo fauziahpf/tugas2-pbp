@@ -55,7 +55,7 @@ Dalam file project_django/urls.py:
     (memetakan data yang didapatkan ke dalam HTML dengan sintaks dari Django untuk pemetaan data template.)
 
 Hasil render dari fungsi show_katalog di katalog/views.py akan dibawa ke templates/katalog.html. Dilakukan mapping data ke dalam HTML dengan menggunakan sintaks khusus dari Django, yakni {{data}} pada file templates/katalog.html.
-Untuk menampilkan nama dan npm, digunakansintaks {{nama}} dan {{id}}. Untuk menampilkan seluruh data barang katalog, dibuat for loop yang mengambil data dari list_barang.
+Untuk menampilkan nama dan npm, digunakan sintaks {{nama}} dan {{id}}. Untuk menampilkan seluruh data barang katalog, dibuat for loop yang mengambil data dari list_barang.
 
 ## Poin 4
 
