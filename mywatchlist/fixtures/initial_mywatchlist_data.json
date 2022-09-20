@@ -4,10 +4,10 @@
         "pk":1,
         "fields":{
             "watched": "Done",
-            "title":"How to Lose a Guy in 10 Days",
+            "title":"How to Lose",
             "rating": "3",
             "release_date":"27/01/2003",
-            "review": "Predictable and sort of boring, but great acting."
+            "review": "Predictable."
         }
     },
     {
@@ -18,7 +18,7 @@
             "title":"My Best Friend's Wedding",
             "rating": "4",
             "release_date":"29/11/2009",
-            "review": "A fun, funny romantic comedy."
+            "review": "Funny."
         }
     },
     {
@@ -29,7 +29,7 @@
             "title":"Sleepless in Seattle",
             "rating": "4",
             "release_date":"25/06/1993",
-            "review": "Quite likable, old-fashioned romcom."
+            "review": "Likable."
         }
     },
     {
@@ -40,7 +40,7 @@
             "title":"Notting Hill",
             "rating": "5",
             "release_date":"13/05/1999",
-            "review": "Holds up with creative direction."
+            "review": "Creative."
         }
     },
     {
@@ -51,7 +51,7 @@
             "title":"Love, Rosie",
             "rating": "5",
             "release_date":"22/10/2014",
-            "review": "It's the story of a big and true love, with lots of turns and twists."
+            "review": "Twists."
         }
     },
     {
@@ -62,7 +62,7 @@
             "title":"You've Got Mail",
             "rating": "4",
             "release_date":"17/04/1999",
-            "review": "A feel-good movie that offers enough comedy and romance to warm the heart."
+            "review": "Warm."
         }
     },
     {
@@ -73,7 +73,7 @@
             "title":"Mamma Mia",
             "rating": "4",
             "release_date":"29/11/2009",
-            "review": "The musical numbers are infectiously entertaining and the performances top-notch."
+            "review": "Entertaining."
         }
     },
     {
@@ -84,7 +84,7 @@
             "title": "When Harry Met Sally",
             "rating": "4",
             "release_date":"12/07/1989",
-            "review": "The story of the movie was humorous, dramatic, and endearing."
+            "review": "Dramatic."
         }
     },
     {
@@ -95,7 +95,7 @@
             "title":"About Time",
             "rating": "4",
             "release_date":"25/10/2013",
-            "review": "A rare example of a romcom done in a fresh, memorable, and heartfelt way."
+            "review": "Fresh."
         }
     },
     {
@@ -106,7 +106,7 @@
             "title":"50 First Dates",
             "rating": "5",
             "release_date":"27/01/2003",
-            "review": "The concept is great and executed perfectly."
+            "review": "Great."
         }
     }
     
