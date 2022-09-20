@@ -4,10 +4,10 @@
         "pk":1,
         "fields":{
             "watched": "Done",
-            "title":"How to Lose",
+            "title":"How to Lose a Guy in 10 Days",
             "rating": "3",
             "release_date":"27/01/2003",
-            "review": "Predictable."
+            "review": "Predictable and sort of boring, but great acting. Classic romcom where both of them are not serious but eventually fall in love."
         }
     },
     {
@@ -18,7 +18,7 @@
             "title":"My Best Friend's Wedding",
             "rating": "4",
             "release_date":"29/11/2009",
-            "review": "Funny."
+            "review": "A fun, funny romantic comedy that, despite a few weaknesses (Mulroney's somewhat dull Michael), is entertaining from start to finish"
         }
     },
     {
@@ -29,7 +29,7 @@
             "title":"Sleepless in Seattle",
             "rating": "4",
             "release_date":"25/06/1993",
-            "review": "Likable."
+            "review": "Quite likable, old-fashioned romcom, with the two leads well-casted for the occasion, were also so easy-going but somehow seem unexcited."
         }
     },
     {
@@ -40,7 +40,7 @@
             "title":"Notting Hill",
             "rating": "5",
             "release_date":"13/05/1999",
-            "review": "Creative."
+            "review": "Holds up with creative direction, endearing characters, grounded tender romance, hilarious jokes, and thoughtful writing that strikes deeply. Absolutely charming and delightful."
         }
     },
     {
@@ -51,7 +51,7 @@
             "title":"Love, Rosie",
             "rating": "5",
             "release_date":"22/10/2014",
-            "review": "Twists."
+            "review": "It's the story of a big and true love, with lots of turns and twists. Nevertheless well-acted and a tearjerker, perfect for an easy night in."
         }
     },
     {
@@ -62,7 +62,7 @@
             "title":"You've Got Mail",
             "rating": "4",
             "release_date":"17/04/1999",
-            "review": "Warm."
+            "review": "A feel-good movie that offers enough comedy and romance to warm the heart without risking a sentimental overdose, but predictably cliche."
         }
     },
     {
@@ -73,7 +73,7 @@
             "title":"Mamma Mia",
             "rating": "4",
             "release_date":"29/11/2009",
-            "review": "Entertaining."
+            "review": "The musical numbers are infectiously entertaining and the performances top-notch but tends to become a bit too saturated when it seems to dilute the plot."
         }
     },
     {
@@ -84,7 +84,7 @@
             "title": "When Harry Met Sally",
             "rating": "4",
             "release_date":"12/07/1989",
-            "review": "Dramatic."
+            "review": "The story of the movie was humorous, dramatic, and endearing. It has stood the test of time thanks to its memorable dialogue and laugh-out-loud humour."
         }
     },
     {
@@ -95,7 +95,7 @@
             "title":"About Time",
             "rating": "4",
             "release_date":"25/10/2013",
-            "review": "Fresh."
+            "review": "A rare example of a romcom done in a fresh, memorable, and heartfelt way. This film is well acted, with a surprisingly profound message."
         }
     },
     {
@@ -106,7 +106,7 @@
             "title":"50 First Dates",
             "rating": "5",
             "release_date":"27/01/2003",
-            "review": "Great."
+            "review": "The concept is great and executed perfectly. It's premise is fun and the sappy moments will probably get even the most unemotional person tearing up."
         }
     }
     
