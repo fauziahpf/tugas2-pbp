@@ -1,0 +1,113 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched": "Done",
+            "title":"How to Lose a Guy in 10 Days",
+            "rating": "3",
+            "release_date":"27/01/2003",
+            "review": "Predictable and sort of boring, but great acting. Classic romcom where both of them are not serious but eventually fall in love."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched": "Not yet",
+            "title":"My Best Friend's Wedding",
+            "rating": "4",
+            "release_date":"29/11/2009",
+            "review": "A fun, funny romantic comedy that, despite a few weaknesses (Mulroney's somewhat dull Michael), is entertaining from start to finish"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched": "Not yet",
+            "title":"Sleepless in Seattle",
+            "rating": "4",
+            "release_date":"25/06/1993",
+            "review": "Quite likable, old-fashioned romcom, with the two leads well-casted for the occasion, were also so easy-going but somehow seem unexcited."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched": "Done",
+            "title":"Notting Hill",
+            "rating": "5",
+            "release_date":"13/05/1999",
+            "review": "Holds up with creative direction, endearing characters, grounded tender romance, hilarious jokes, and thoughtful writing that strikes deeply. Absolutely charming and delightful."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched": "Done",
+            "title":"Love, Rosie",
+            "rating": "5",
+            "release_date":"22/10/2014",
+            "review": "It's the story of a big and true love, with lots of turns and twists. Nevertheless well-acted and a tearjerker, perfect for an easy night in."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched": "Not yet",
+            "title":"You've Got Mail",
+            "rating": "4",
+            "release_date":"17/04/1999",
+            "review": "A feel-good movie that offers enough comedy and romance to warm the heart without risking a sentimental overdose, but predictably cliche."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched": "Done",
+            "title":"Mamma Mia",
+            "rating": "4",
+            "release_date":"29/11/2009",
+            "review": "The musical numbers are infectiously entertaining and the performances top-notch but tends to become a bit too saturated when it seems to dilute the plot."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched": "Done",
+            "title": "When Harry Met Sally",
+            "rating": "4",
+            "release_date":"12/07/1989",
+            "review": "The story of the movie was humorous, dramatic, and endearing. It has stood the test of time thanks to its memorable dialogue and laugh-out-loud humour."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched": "Not yet",
+            "title":"About Time",
+            "rating": "4",
+            "release_date":"25/10/2013",
+            "review": "A rare example of a romcom done in a fresh, memorable, and heartfelt way. This film is well acted, with a surprisingly profound message."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched": "Not yet",
+            "title":"50 First Dates",
+            "rating": "5",
+            "release_date":"27/01/2003",
+            "review": "The concept is great and executed perfectly. It's premise is fun and the sappy moments will probably get even the most unemotional person tearing up."
+        }
+    }
+    
+]
