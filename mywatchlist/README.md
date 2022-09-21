@@ -6,7 +6,9 @@ Kelas PBP A
 
 # Link Heroku: 
 https://tugas-2-sissy.herokuapp.com/mywatchlist/html/
+
 https://tugas-2-sissy.herokuapp.com/mywatchlist/xml/
+
 https://tugas-2-sissy.herokuapp.com/mywatchlist/json/ 
 
 # 1. Perbedaan antara JSON, XML, dan HTML!
