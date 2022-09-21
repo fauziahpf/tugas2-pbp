@@ -3,7 +3,7 @@ from mywatchlist.models import MyWatchlist
 from django.http import HttpResponse
 from django.core import serializers
 
-# TODO: Create your views here.
+# Create views here
 def show_watchlist(request):
     data_film_watchlist = MyWatchlist.objects.all()
 
@@ -42,3 +42,5 @@ def show_json_by_id(request, id):
     data = MyWatchlist.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
+# Acknowledgement
+# Review data source: https://www.rottentomatoes.com 
