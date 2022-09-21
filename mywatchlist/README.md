@@ -38,7 +38,7 @@ Dalam mengimplementasi sebuah platform yang berhubungan erat dengan data, kita a
 
 6) Menambahkan kode ` path('mywatchlist/', include('mywatchlist.urls')) ` ke urlspatterns di project_django/urls.py dan menambahkan kode berikut ke urlspatterns di mywatchlist/urls.py:
     ```
-    path('html/', show_html, name='show_html'),
+    path('html/', show_watchlist, name='show_watchlist'),
     path('xml/', show_xml, name='show_xml'),
     path('json/', show_json, name='show_json'), 
     ```
