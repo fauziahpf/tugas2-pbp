@@ -11,6 +11,7 @@ https://tugas-2-sissy.herokuapp.com/mywatchlist/xml/
 
 https://tugas-2-sissy.herokuapp.com/mywatchlist/json/ 
 
+
 # 1. Perbedaan antara JSON, XML, dan HTML!
     
 - JSON adalah singkatan dari JavaScript Object Notation, sehingga diturunkan dari JavaScript. JSON menggunakan teks yang dapat dibaca untuk menyimpan dan mengirimkan data yang terdiri dari array dan attribute pair values (keys dan valuenya). JSON digunakan untuk menyimpan informasi secara terorganisir dan mudah diakses.

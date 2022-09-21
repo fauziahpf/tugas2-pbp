@@ -2,7 +2,6 @@ from django.test import TestCase
 
 # Create your tests here.
 from django.test import TestCase, Client
-# from django.urls import resolve
 
 class WatchlistTesting(TestCase):
     def test_mywatchlist_html_is_exist(self):
