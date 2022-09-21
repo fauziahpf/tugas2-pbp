@@ -12,7 +12,7 @@
     
 
 <table>
-    <tr>
+    <tr style="height:40px">
       <th>Watched</th>
       <th>Title</th>
       <th>Rating</th>
@@ -22,7 +22,7 @@
     {% comment %} Add the data below this line {% endcomment %}
     
     {% for film in list_film %}
-    <tr>
+    <tr style="height:40px">
         <td style="text-align:center">{{film.watched}}</td>
         <td style="text-align:center">{{film.title}}</td>
         <td style="text-align:center">{{film.rating}}</td>
