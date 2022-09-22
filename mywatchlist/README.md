@@ -34,7 +34,7 @@ Dalam mengimplementasi sebuah platform yang berhubungan erat dengan data, kita a
 
 4) Menambahkan 10 data untuk objek MyWatchList yang sudah dibuat di atas pada mywatchlist/fixtures/initial_mywatchlist_data.json, kemudian menjalankan perintah ` python manage.py loaddata initial_mywatchlist_data.json `
 
-5) Membuat fungsi baru yang menerima parameter request dan mengembalikan HttpResponse yang berisi parameter data hasil query yang sudah diserialisasi menjadi HTML, XML, dan JSON (yaitu function show_html, show_xml, dan show_json)
+5) Membuat fungsi baru yang menerima parameter request dan mengembalikan HttpResponse yang berisi parameter data hasil query yang sudah diserialisasi menjadi HTML, XML, dan JSON (yaitu function show_watchlist, show_xml, dan show_json)
 
 6) Menambahkan kode ` path('mywatchlist/', include('mywatchlist.urls')) ` ke urlspatterns di project_django/urls.py dan menambahkan kode berikut ke urlspatterns di mywatchlist/urls.py:
     ```
