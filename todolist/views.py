@@ -23,6 +23,7 @@ def show_todolist(request):
     context = {
         'list_todo': todo_data,
         'username' : request.user.username,
+        'last_login': request.COOKIES['last_login'],
     }
     return render(request, "todolist.html", context)
 
@@ -67,6 +68,20 @@ def create_task(request):
         description = request.POST.get('desc')
         date = datetime.datetime.now()
         Task.objects.create(user=user, title=title, description=description, date=date)
-        response = HttpResponseRedirect(reverse('todolist:show_todolist'))
-        return response
+        return HttpResponseRedirect(reverse('todolist:show_todolist'))
     return render(request, 'taskform.html')
+
+def delete_task(request, id):
+    data = Task.objects.get(id=id)
+    data.delete()
+    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+
+def change_status(request, id):
+    data = Task.objects.get(id=id)
+    if data.is_finished == False:
+        data.is_finished = True
+    else:
+        data.is_finished = False
+    data.save()
+    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+

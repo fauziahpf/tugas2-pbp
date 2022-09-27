@@ -18,22 +18,46 @@ table, th, td {
 
 <table>
     <tr style="height:50px">
-      <th>Tanggal Pembuatan</th>
-      <th>Judul</th>
-      <th>Deskripsi</th>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Change Status</th>
+      <th>Delete Task</th>
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
     
     {% for task in list_todo %}
-    <tr style="height:50px">
-        <td style="text-align:center; width: 150px">{{task.date}}</td>
+    <tr style="height:60px">
+        <td style="text-align:center; width: 120px">{{task.date}}</td>
         <td style="text-align:center; width: 150px">{{task.title}}</td>
-        <td style="text-align:center; width: 600px">{{task.description}}</td>
+        <td style="text-align:center; width: 400px">{{task.description}}</td>
+
+        <td style="text-align:center; width: 120px">
+          {% if task.is_finished %}
+            Selesai
+          {% else %}
+            Belum Selesai
+          {% endif %} 
+        </td>
+
+        <td style="text-align:center; width: 120px">
+          <button style="margin:3px;"><a href="{% url 'todolist:change_status' task.id %}">Change status</a></button>
+        </td>
+
+        <td style="text-align:center; width: 120px">
+          <button style="margin:3px;"><a href="{% url 'todolist:delete_task' task.id %}">Delete</a></button>
+        </td>
+
     </tr>
+
     {% endfor content %}
+
 </table>
 <br></br>
 <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+<h4>Sesi terakhir login: {{ last_login }}</h4>
 
 {% endblock content %}
 
