@@ -42,5 +42,9 @@ def show_json_by_id(request, id):
     data = MyWatchlist.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
+def show_wl(request, format):
+    data = MyWatchlist.objects.all()
+    return HttpResponse(serializers.serialize(format, data), content_type=f"application/{format}")
+
 # Acknowledgement
 # Review data source: https://www.rottentomatoes.com 

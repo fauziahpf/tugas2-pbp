@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Tugas 4 Assignment PBP/PBD</h1>
+
+<h3> {{user}}'s To-Do List </h3>
+
+<button><a href="{% url 'todolist:create_task' %}">Create new task</a></button>
+<br> </br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<table>
+    <tr style="height:50px">
+      <th>Tanggal Pembuatan</th>
+      <th>Judul</th>
+      <th>Deskripsi</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    
+    {% for task in list_todo %}
+    <tr style="height:50px">
+        <td style="text-align:center; width: 150px">{{task.date}}</td>
+        <td style="text-align:center; width: 150px">{{task.title}}</td>
+        <td style="text-align:center; width: 600px">{{task.description}}</td>
+    </tr>
+    {% endfor content %}
+</table>
+<br></br>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+{% endblock content %}
+
