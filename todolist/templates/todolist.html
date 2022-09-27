@@ -6,9 +6,6 @@
 
 <h3> {{user}}'s To-Do List </h3>
 
-<button><a href="{% url 'todolist:create_task' %}">Create new task</a></button>
-<br> </br>
-
 <style>
 table, th, td {
   border: 1px solid black;
@@ -42,7 +39,7 @@ table, th, td {
         </td>
 
         <td style="text-align:center; width: 120px">
-          <button style="margin:3px;"><a href="{% url 'todolist:change_status' task.id %}">Change status</a></button>
+          <button style="margin:3px;"><a href="{% url 'todolist:change_status' task.id %}">Change</a></button>
         </td>
 
         <td style="text-align:center; width: 120px">
@@ -55,6 +52,7 @@ table, th, td {
 
 </table>
 <br></br>
+<button style="margin:3px;"><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button>
 <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 
 <h4>Sesi terakhir login: {{ last_login }}</h4>
