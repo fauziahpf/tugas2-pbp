@@ -19,11 +19,13 @@ from django.urls import reverse
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
     todo_data = Task.objects.filter(user=request.user)
-
+    var = request.COOKIES.get('last_login', 'UserNotFound')
+    if var == "UserNotFound":
+        return HttpResponseRedirect(reverse("todolist:login"))
     context = {
         'list_todo': todo_data,
         'username' : request.user.username,
-        'last_login': request.COOKIES['last_login'],
+        'last_login': var,
     }
     return render(request, "todolist.html", context)
 
@@ -61,7 +63,8 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
-def create_task(request):
+@login_required(login_url='/todolist/login/')
+def add_task(request):
     if request.method == 'POST':
         user = request.user
         title = request.POST.get('todo')
@@ -71,11 +74,13 @@ def create_task(request):
         return HttpResponseRedirect(reverse('todolist:show_todolist'))
     return render(request, 'taskform.html')
 
+@login_required(login_url='/todolist/login/')
 def delete_task(request, id):
     data = Task.objects.get(id=id)
     data.delete()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
+@login_required(login_url='/todolist/login/')
 def change_status(request, id):
     data = Task.objects.get(id=id)
     if data.is_finished == False:
