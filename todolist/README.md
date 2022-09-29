@@ -1,4 +1,4 @@
-# Tugas 3 PBP - Pengenalan Aplikasi Django dan Models View Template (MVT) pada Django
+# Tugas 4 PBP: Pengimplementasian Form dan Autentikasi Menggunakan Django
 
 Fauziah Putri Fajrianti - 2106707435 - EZ
 
