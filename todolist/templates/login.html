@@ -5,41 +5,53 @@
 {% endblock meta %}
 
 {% block content %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
 
-<div class = "login">
+    <body class="secondary-body"> 
+        <div class = "login vh-100 d-flex justify-content-center align-items-center">
+            <div class="card text-center m-10 shadow" style="width: 20rem">
+                <div class="card-body" style="font-weight: 500">
+                    <h4 class="card-title mt-3 mb-2 fw-bold">Login</h4>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <table>
+                            <tr>
+                                <p class="title-input mt-4 mb-0 ml-3" style="font-size: 14px; text-align:left"> 👤 Username </p>
+                                <input style="font-size: 13px" type="text" name="username" placeholder="Username" class="form-control">
+                            </tr>    
+                            <tr>
+                                <p class="title-input mt-3 mb-0 ml-3" style="font-size: 14px; text-align:left"> 🔐 Password </p>
+                                <input style="font-size: 13px" type="password" name="password" placeholder="Password" class="form-control">
+                            </tr>        
+                            <input class="btn login_btn mt-3 mb-15" 
+                            style="background: #7f52a9; color:white; font-size: 14px; border-radius: 20px; width:40%" 
+                            onmouseover="this.style.backgroundColor='#555'" 
+                            onmouseout="this.style.backgroundColor='#7f52a9'" type="submit" value="Login">
+                        </table>
+                    </form>
+                </div>
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li style="font-size: 14px; color:red; text-align: left">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %} 
+                <p> </p>
+                <div class="card-footer text-muted">
+                    <p class="mt-2 mb-0" style="font-size: 14px">Belum mempunyai akun?</p> 
+                    <a class="btn btn-outline-primary mt-2 mb-3" style="font-size: 13px; border-radius: 20px; width:40%" role="button" href="{% url 'todolist:register' %}"> Buat Akun</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
 
-    <h1>Login</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
-</div>
 
 {% endblock content %}
