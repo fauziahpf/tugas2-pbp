@@ -26,23 +26,6 @@ h1 {
     /* font-weight: bold; */
 }
 
-.btn-bd-primary {
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet);
-    --bs-btn-border-color: var(--bd-violet);
-    --bs-btn-border-radius: .5rem;
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: var(--bd-violet);
-    --bs-btn-hover-border-color: var(--bd-violet);
-    /* --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color); */
-  }
-
-  #login_btn {
-    background: #285AC5;
-}
-
   .login_btn {
     background-color: #423a5d;
     transition-duration: 0.4s;
@@ -64,9 +47,6 @@ h1 {
 }
 
 /* Code source: https://ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers */
-.creating-card {
-    background-color: rgba(161, 194, 216, 0.2) !important
-}
 
 .card{
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);

@@ -6,7 +6,7 @@ Kelas PBP A
 <br></br>
 
 # Link Heroku: 
-https://tugas-2-sissy.herokuapp.com/todolist/ <br> </br>
+Tekan [link ini](ttps://tugas-2-sissy.herokuapp.com/todolist/) untuk menuju ke aplikasi To-Do List dalam Heroku. <br> </br>
 
 
 # 1.  Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
@@ -61,7 +61,7 @@ __External CSS__
          ...
     }
     ```
-3. __Class Selector__ :s elector untuk menambah styling pada elemen dengan class tertentu. Misal untuk class `card` didefinisikan dengan cara: 
+3. __Class Selector__ : selector untuk menambah styling pada elemen dengan class tertentu. Misal untuk class `card` didefinisikan dengan cara: 
     ```
     .card {  
         ...
@@ -71,8 +71,27 @@ __External CSS__
 
 
 # 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
-- 
-- 
-- 
-- 
-- 
+- Agar dapat menggunakan __CSS framework Bootstrap__ untuk aplikasi todolist ini, ditambahkan barisan kode berikut dalam tag `<head>` di setiap dokumen HTML aplikasi:
+    ```
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    ```
+- dan barisan kode berikut dalam tag `<body> `:
+    ```
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    ```
+- Membuat file ` static/css/style.css ` untuk keperluan External CSS.
+- Kostumisasi halaman __login__ dengan menerapkan class `card` yang berisi elemen-elemen untuk keperluan login, menggunakan class `btn` untuk tombol-tombol yang ada, menambahkan `card-footer`, serta mengkostumisasi warna-warna, posisi elemen, dan styling lainnya menggunakan Bootstrap classes, Inline CSS, Internal CSS, atau External CSS.
+- Kostumisasi halaman __register__ dengan menerapkan class `card` yang berisi elemen-elemen untuk keperluan register, menggunakan class `btn` untuk tombol-tombol daftar, serta mengkostumisasi warna-warna, posisi elemen, dan styling lainnya menggunakan Bootstrap classes, Inline CSS, Internal CSS, atau External CSS.
+- Kostumisasi halaman __create-task__ dengan menerapkan class `card` yang berisi elemen-elemen untuk keperluan membuat task baru, menggunakan class `btn` untuk tombol-tombol yang ada, membuat navigation bar dengan menerapkan class `navbar`, menambahkan gambar melalui tag `<img>`, membuat card tersebut bisa berbentuk horizontal atau vertical (tergantung pada device yang digunakan), serta mengkostumisasi warna-warna, posisi elemen, dan styling lainnya menggunakan Bootstrap classes, Inline CSS, Internal CSS, atau External CSS.
+- Kostumisasi halaman __todolist__ dengan menerapkan class `card` untuk masing-masing task pengguna, menambahkan `card-header` untuk memperlihat status task, membuat navigation bar dengan menerapkan class `navbar`, menggunakan class `btn` untuk tombol-tombol yang ada, serta mengkostumisasi warna-warna, posisi elemen, dan styling lainnya menggunakan Bootstrap classes, Inline CSS, Internal CSS, atau External CSS.
+- __(Bonus)__ Menambahkan efek ketika melakukan hover pada cards dengan menambahkan :hover pada class card dalam file External CSS:
+    ```
+    .card{
+        transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+        cursor: pointer;
+    }
+
+    .card:hover{
+        transform: scale(1.03);
+    }
+    ```
