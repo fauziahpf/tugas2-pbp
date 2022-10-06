@@ -6,7 +6,7 @@ Kelas PBP A
 <br></br>
 
 # Link Heroku: 
-Tekan [link ini](ttps://tugas-2-sissy.herokuapp.com/todolist/) untuk menuju ke aplikasi To-Do List dalam Heroku. <br> </br>
+Tekan [link ini](https://tugas-2-sissy.herokuapp.com/todolist/) untuk menuju ke aplikasi To-Do List dalam Heroku. <br> </br>
 
 
 # 1.  Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
