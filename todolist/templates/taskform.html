@@ -20,14 +20,16 @@
         </div>      
 
         <div class = "vh-100 d-flex justify-content-center align-items-center">
-            <div class="card text-center m-5 shadow" style="width: 42rem">
-                <div class="row g-2">
-                    <div class="col-lg-6">
+            <div class="card text-center m-5 shadow" style="max-width: 40rem; max-height: 40rem;">
+                <div class="row g-0"> 
+
+                    <div class="col-lg col-md-6 col-sm-12 col-xs-12 overflow-auto" style="max-height: 20rem">
                         <img src="https://i.pinimg.com/originals/00/dc/ed/00dced5165457914e6156fff434b6072.jpg" 
-                        class="img-fluid m-0" alt="...">
+                        class="img-fluid rounded" alt="...">
                     </div>
-                    <div class="col md-8"> 
-                        <div class="card-body" style="font-weight: 500">
+
+                    <div class="col-lg col-md-6 col-sm-12 col-xs-12"> 
+                        <div class="card-body" style="font-weight: 500" >
                             <h4 class="card-title mt-3 mb-3 fw-bold subtitle text-dark"> Create new task! </h4>
                             <form action="" method="POST">
                                 {% csrf_token %}
@@ -41,16 +43,22 @@
                                         <p class="title-input mt-4 mb-0 ml-3" style="font-size: 14px; text-align:left"> 📄 Description </p>
                                         <input style="font-size: 13px" type="text" name="desc" placeholder="Description" class="form-control">
                                     </tr>
+                                    <tr>
+                                        <input class="btn login_btn mt-4 mb-4" 
+                                            style="background: #7f52a9; color:white; font-size: 14px; border-radius: 20px; width:40%" 
+                                            onmouseover="this.style.backgroundColor='#555'" 
+                                            onmouseout="this.style.backgroundColor='#7f52a9'" 
+                                            type="submit" name="submit" value="Create task">
+                                    </tr>
                                 </table> 
                                 
-                                <input class="btn login_btn mt-4 mb-4" 
-                                    style="background: #7f52a9; color:white; font-size: 14px; border-radius: 20px; width:40%" 
-                                    onmouseover="this.style.backgroundColor='#555'" 
-                                    onmouseout="this.style.backgroundColor='#7f52a9'" type="submit" name="submit" value="Create task">
+                                
                             </form>
                         </div>
                     </div> 
                 </div>
+                </div>
+
             </div>
         </div>
     </body>

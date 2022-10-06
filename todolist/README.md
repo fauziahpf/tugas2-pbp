@@ -9,13 +9,13 @@ Kelas PBP A
 https://tugas-2-sissy.herokuapp.com/todolist/
 
 
-# 1. Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
-{% csrf_token %} merupakan token yang dibentuk pada setiap *user session* berupa suatu *random value* yang sulit untuk ditebak. {% csrf_token %} pada elemen <form> berguna untuk membentuk token dan memeriksa kembali untuk setiap permintaan yang masuk dengan cara membandingkan *value*-nya saat memasuki <form> dan setelah pengguna mengirim *request* untuk men-*submit* data. Apabila *value*-nya berbeda, server akan menolak *request* tersebut. Karena {% csrf_token %} juga berguna untuk mencegah CSRF Attack, *user session* tersebut akan dihapus dan dicatat sebagai potensi CSRF Attack. 
+# 1. Apa kegunaan {% csrf_token %} pada elemen `<form>`? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen `<form>`?
+{% csrf_token %} merupakan token yang dibentuk pada setiap *user session* berupa suatu *random value* yang sulit untuk ditebak. {% csrf_token %} pada elemen `<form>` berguna untuk membentuk token dan memeriksa kembali untuk setiap permintaan yang masuk dengan cara membandingkan *value*-nya saat memasuki `<form>` dan setelah pengguna mengirim *request* untuk men-*submit* data. Apabila *value*-nya berbeda, server akan menolak *request* tersebut. Karena {% csrf_token %} juga berguna untuk mencegah CSRF Attack, *user session* tersebut akan dihapus dan dicatat sebagai potensi CSRF Attack. 
 
-Jika tidak ada potongan kode {% csrf_token %} pada elemen <form>, *website* tetap bisa berjalan, tetapi akan terdapat beberapa route link sensitif yang dapat diakses oleh orang lain (contohnya *logout* dan *delete account*). Akun pengguna dapat dikendalikan orang lain (di-*logout* atau dihapus) tanpa izin pengguna.
+Jika tidak ada potongan kode {% csrf_token %} pada elemen `<form>`, *website* tetap bisa berjalan, tetapi akan terdapat beberapa route link sensitif yang dapat diakses oleh orang lain (contohnya *logout* dan *delete account*). Akun pengguna dapat dikendalikan orang lain (di-*logout* atau dihapus) tanpa izin pengguna.
 
 
-# 2. Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
+# 2. Apakah kita dapat membuat elemen `<form>` secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat `<form>` secara manual.
 Kita dapat membuat elemen secara manual (tanpa menggunakan *generator* seperti {{ form.as_table }}). Untuk membuat *form* tersebut, digunakan *tag form* untuk HTML dan digunakan method POST. Di dalamnya, dibuat *tag* input sesuai kebutuhan. Dalam *tag input* ini, menggunakan atribut *text* dan *submit*, form akan menerima input dari pengguna berupa text untuk di-*submit*. Dibuat pula tombol untuk pengguna tekan agar bisa dikirim data *input* ke *server*.
 
 

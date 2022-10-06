@@ -13,31 +13,37 @@
 
     <body class="secondary-body"> 
         <div class = "login vh-100 d-flex justify-content-center align-items-center">
-            <div class="card text-center m-10 shadow" style="width: 20rem">
+            <div class="card text-center mx-2 m-10 shadow" style="width: 20rem">
                 <div class="card-body" style="font-weight: 500">
+
                     <h4 class="card-title mt-3 mb-2 fw-bold">Login</h4>
+                    
                     <form method="POST" action="">
                         {% csrf_token %}
+
                         <table>
                             <tr>
                                 <p class="title-input mt-4 mb-0 ml-3" style="font-size: 14px; text-align:left"> 👤 Username </p>
                                 <input style="font-size: 13px" type="text" name="username" placeholder="Username" class="form-control">
-                            </tr>    
+                            </tr>   
+
                             <tr>
                                 <p class="title-input mt-3 mb-0 ml-3" style="font-size: 14px; text-align:left"> 🔐 Password </p>
                                 <input style="font-size: 13px" type="password" name="password" placeholder="Password" class="form-control">
-                            </tr>        
+                            </tr>  
+
                             <input class="btn login_btn mt-3 mb-15" 
                             style="background: #7f52a9; color:white; font-size: 14px; border-radius: 20px; width:40%" 
                             onmouseover="this.style.backgroundColor='#555'" 
                             onmouseout="this.style.backgroundColor='#7f52a9'" type="submit" value="Login">
+                        
                         </table>
                     </form>
                 </div>
                 {% if messages %}
                     <ul>
                         {% for message in messages %}
-                            <li style="font-size: 14px; color:red; text-align: left">{{ message }}</li>
+                            <li style="font-size: 14px; text-align: left">{{ message }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %} 
