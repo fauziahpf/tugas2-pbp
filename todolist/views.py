@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from todolist.models import Task
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 
 from django.shortcuts import redirect
@@ -90,3 +90,26 @@ def change_status(request, id):
     data.save()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@login_required(login_url='/todolist/login/')
+def todolist_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.datetime.now()
+        user = request.user
+        is_finished = False
+        data = Task(title=title, description=description, date=date, user=user, is_finished=is_finished)
+        data.save()
+        context = {
+            "pk": data.pk,
+            "title": data.title,
+            "description": data.title,
+            "is_finished": data.is_finished,
+            "date": data.date
+        }
+        return JsonResponse(context)
