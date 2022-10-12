@@ -1,4 +1,4 @@
-# Tugas 5 PBP: Web Design Using HTML, CSS, and CSS Framework
+# Tugas 6 PBP: Javascript dan AJAX
 
 Fauziah Putri Fajrianti - 2106707435
 

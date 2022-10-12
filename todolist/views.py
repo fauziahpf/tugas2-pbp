@@ -78,7 +78,7 @@ def add_task(request):
 def delete_task(request, id):
     data = Task.objects.get(id=id)
     data.delete()
-    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+    return JsonResponse({})
 
 @login_required(login_url='/todolist/login/')
 def change_status(request, id):

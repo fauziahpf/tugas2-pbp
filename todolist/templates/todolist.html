@@ -23,6 +23,7 @@
   <script>
 
     function handleCard() {
+      $("#allCards").empty();
       $.ajax({
         url: './json/',
         dataType: 'json',
@@ -40,7 +41,7 @@
 
             var date = new Date(data[i].fields.date);
             var row = 
-              `<div class="col mb-4">
+              `<div class="col mb-4" id="${data[i].pk}">
                 <div class="card shadow rounded h-100">
                   
                   <h5 class="card-header" style="${styling}"> ${status} </h5>
@@ -51,7 +52,7 @@
                     <a class="btn btn-outline-info m-1" role="button" id="small-btn" 
                         href="change/${data[i].pk}">Change</a>
                     <a class="btn btn-outline-danger m-1" role="button" id="small-btn" 
-                        href="delete/${data[i].pk}">Delete</a>
+                        onclick="deleteTask(${data[i].pk});">Delete</a>
                     <p class="text-secondary card-subtitle align-text-bottom mt-3" style="font-size: 13px; text-align: right;">${data[i].fields.date}</p>
                   </div>
                   
@@ -61,9 +62,6 @@
             $('#allCards').append(row);
           }
         },
-        error: function (jqXHR, textStatus, errorThrown) {
-          alert('Error: ' + textStatus + ' - ' + errorThrown);
-        }
       });
     }
 
@@ -86,6 +84,16 @@
           error : function(xhr,errmsg,err) {
               console.log(xhr.status + ": " + xhr.responseText);
       }
+      })
+    }
+
+    function deleteTask(id) {
+      $.ajax({
+        url: `./delete/${id}`,
+        dataType: "json",
+        success: function() {
+          $(`#${id}`).remove();
+        }
       })
     }
 
@@ -151,21 +159,17 @@
                       <input style="font-size: 13px" type="text" name="desc" placeholder="Description" id="task_desc" class="form-control">
                   </tr>
                   <tr>
-                      <input class="btn login_btn mt-4 mb-4" 
-                          style="background: #7f52a9; color:white; font-size: 14px; border-radius: 20px; width:40%" 
-                          onmouseover="this.style.backgroundColor='#555'" 
-                          onmouseout="this.style.backgroundColor='#7f52a9'" 
-                          type="submit" name="submit" onclick="createTask();" value="Create task">
+                      
                   </tr>
                 </table> 
 
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                          onclick="document.getElementById('taskForm').reset();">Close</button>
-                  <input type="submit" name="submit" value="Tambah" class="btn btn-primary">
-              </div>
-
             </form>
+            <input class="btn login_btn mt-4 mb-4" 
+              style="background: #7f52a9; color:white; font-size: 14px; border-radius: 20px; width:40%" 
+              onmouseover="this.style.backgroundColor='#555'" 
+              onmouseout="this.style.backgroundColor='#7f52a9'" 
+              data-bs-dismiss="modal" 
+              type="submit" name="submit" onclick="createTask();" value="Create task">
           </div>
     </div>
 </div>
