@@ -40,10 +40,9 @@
             }
 
             var date = new Date(data[i].fields.date);
-            var row = 
+            var row =  
               `<div class="col mb-4" id="${data[i].pk}">
                 <div class="card shadow rounded h-100">
-                  
                   <h5 class="card-header" style="${styling}"> ${status} </h5>
 
                   <div class="card-body">
@@ -55,10 +54,9 @@
                         onclick="deleteTask(${data[i].pk});">Delete</a>
                     <p class="text-secondary card-subtitle align-text-bottom mt-3" style="font-size: 13px; text-align: right;">${data[i].fields.date}</p>
                   </div>
-                  
+    
                 </div>
               </div>`;
-
             $('#allCards').append(row);
           }
         },
@@ -81,9 +79,7 @@
               handleCard();
               document.getElementById("taskForm").reset();
           },
-          error : function(xhr,errmsg,err) {
-              console.log(xhr.status + ": " + xhr.responseText);
-      }
+          
       })
     }
 
@@ -157,9 +153,6 @@
                   <tr>
                       <p class="title-input mt-3 mb-0 ml-3" style="font-size: 14px; text-align:left"> 📄 Description </p>
                       <input style="font-size: 13px" type="text" name="desc" placeholder="Description" id="task_desc" class="form-control">
-                  </tr>
-                  <tr>
-                      
                   </tr>
                 </table> 
 
